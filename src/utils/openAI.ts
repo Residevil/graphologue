@@ -61,10 +61,10 @@ const getRequestOptions = (options: any) => {
     headers: {
       'Content-Type': 'application/json',
       Authorization:
-        'Bearer ' +
+        `Bearer ` +
         String(
           debug
-            ? process.env.REACT_APP_OPENAI_API_KEY
+            ? `${process.env.REACT_APP_OPENAI_API_KEY}`
             : userProvidedAPIKey.current,
         ),
     },
